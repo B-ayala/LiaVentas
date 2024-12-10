@@ -2,7 +2,12 @@
   "name": "indumentaria",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://github.com/B-ayala/LiaVentas",
   "dependencies": {
+    "@emotion/react": "^11.13.5",
+    "@emotion/styled": "^11.13.5",
+    "@mui/icons-material": "^6.1.10",
+    "@mui/material": "^6.1.10",
     "@shadcn/ui": "^0.0.4",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.0.1",
@@ -11,7 +16,9 @@
     "@types/node": "^22.10.1",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
+    "card": "^2.5.4",
     "classnames": "^2.5.1",
+    "content-card": "^1.0.0-alpha.4",
     "font-awesome": "^4.7.0",
     "lucide-react": "^0.462.0",
     "next": "^15.0.3",
@@ -26,6 +33,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

@@ -2,7 +2,7 @@ import classNames from "classnames";
 import React, { ButtonHTMLAttributes } from "react";
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: "outline" | "ghost" | "default" | "link"; // Agregar "link"
+  variant?: "outline" | "ghost" | "default" | "link"  | "primary"; // Agregar "link"
   size?: "sm" | "icon" | "default";
 }
 

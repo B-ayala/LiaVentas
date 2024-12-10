@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Search, ShoppingBag, User, Menu } from "lucide-react";
+import { Search, ShoppingCart, User, Menu } from "lucide-react";
 import { Button } from "../ui/button";
 import { Input } from "../ui/input";
 import { Link } from "react-router-dom";
@@ -61,7 +61,7 @@ export function NavBar() {
             <User className="h-5 w-5" />
           </Button>
           <Button size="icon" variant="ghost">
-            <ShoppingBag className="h-5 w-5" />
+            <ShoppingCart className="h-5 w-5" />
           </Button>
         </div>
       </div>

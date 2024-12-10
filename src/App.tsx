@@ -12,23 +12,29 @@ import Footer from "./componentes/footer/footer";
 import DetalleCalzado from "./componentes/detalleProduct/calzado/detalleCalzado";
 import DetalleIndumentaria from "./componentes/detalleProduct/Indumentaria/detalleIndumentaria";
 
+const apiUrl = process.env.REACT_APP_PROD_URL ? process.env.REACT_APP_PROD_URL : process.env.REACT_APP_LOCAL_URL;
 
 const App: React.FC = () => {
+
+
   return (
-    <Router>
+    <Router basename={apiUrl}>
       <div className="min-h-screen">
         <NavBar />
         <Routes>
           <Route path="/" element={<HeroSection />} />
           <Route path="/collections" element={<SeasonCollections />} />
           <Route path="/calzado" element={<ProductCalzado productos={productosZapatos} />} />
-          <Route path="/indumentaria" element={<ProductIndumentaria productos={productosIndumentaria} />} />
+          <Route
+            path="/indumentaria"
+            element={<ProductIndumentaria productos={productosIndumentaria} />}
+          />
           <Route path="/acercaDeNosotros" element={<AcercaDeNosotros />} />
           <Route path="/detalleCalzado" element={<DetalleCalzado />} />
           <Route path="/detalleIndumentaria" element={<DetalleIndumentaria />} />
         </Routes>
       </div>
-      <Footer/>
+      <Footer />
     </Router>
   );
 };

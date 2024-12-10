@@ -1,10 +1,8 @@
-"use client";
-
-import { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
 import { Heart, Star } from "lucide-react";
 import { Button } from "../../ui/button";
-
 import vestido from "../../../img/indumentaria/vestidoVerde.webp";
+import CartNotification from "../../procesoCarrito/popupCarrito/popupCarrito";
 
 interface ColorOption {
   name: string;
@@ -19,6 +17,7 @@ interface Size {
 const DetalleIndumentaria: React.FC = () => {
   const [selectedSize, setSelectedSize] = useState<string>("2");
   const [selectedColor, setSelectedColor] = useState<string>("Negro");
+  const [isNotificationOpen, setIsNotificationOpen] = useState(false);
 
   const sizes: Size[] = [
     { value: "2", label: "S" },
@@ -39,6 +38,15 @@ const DetalleIndumentaria: React.FC = () => {
     // Hacer scroll hacia arriba
     window.scrollTo(0, 0);
   }, []);
+
+  const handleAddToCart = () => {
+    setIsNotificationOpen(true);
+
+    // Cierra la notificación después de 3 segundos, si deseas
+    setTimeout(() => {
+      setIsNotificationOpen(false);
+    }, 3000);
+  };
 
   return (
     <div className="container mx-auto px-4 py-8">
@@ -161,9 +169,18 @@ const DetalleIndumentaria: React.FC = () => {
             </div>
           </div>
 
-          <Button className="w-full py-6 text-lg">Comprar ahora</Button>
+          <Button className="w-full py-6 text-lg" onClick={handleAddToCart}>
+            Comprar ahora
+          </Button>
         </div>
       </div>
+
+      {/* Popup Notification */}
+      {isNotificationOpen && (
+        <div className="fixed top-4 right-4 z-50">
+          <CartNotification onClose={() => setIsNotificationOpen(false)} />
+        </div>
+      )}
     </div>
   );
 };
