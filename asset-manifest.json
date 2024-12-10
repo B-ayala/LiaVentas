@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/LiaVentas/static/css/main.123a510f.css",
-    "main.js": "/LiaVentas/static/js/main.1494c634.js",
+    "main.js": "/LiaVentas/static/js/main.4059f595.js",
     "static/media/zapatos.png": "/LiaVentas/static/media/zapatos.a35374298dfa34dd3b30.png",
     "static/media/tacos marron.png": "/LiaVentas/static/media/tacos marron.39d274fe19b25ee5c0a2.png",
     "static/media/tacos ejecutivo.png": "/LiaVentas/static/media/tacos ejecutivo.ef2c3e543820e0577c8b.png",
@@ -13,10 +13,10 @@
     "static/media/fondo.jpg": "/LiaVentas/static/media/fondo.24d5c4fba44b8b5d8865.jpg",
     "index.html": "/LiaVentas/index.html",
     "main.123a510f.css.map": "/LiaVentas/static/css/main.123a510f.css.map",
-    "main.1494c634.js.map": "/LiaVentas/static/js/main.1494c634.js.map"
+    "main.4059f595.js.map": "/LiaVentas/static/js/main.4059f595.js.map"
   },
   "entrypoints": [
     "static/css/main.123a510f.css",
-    "static/js/main.1494c634.js"
+    "static/js/main.4059f595.js"
   ]
 }
